@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "ee9eddbe-e72b-4d4b-a0b2-608076b06fd0",
+		"name": "github-docker-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24101642"
+	},
+	"item": [
+		{
+			"name": "get home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{target_url}}/",
+					"host": [
+						"{{target_url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
