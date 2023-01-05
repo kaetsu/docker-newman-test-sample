@@ -25,4 +25,4 @@ jobs:
         uses: mikepenz/action-junit-report@v2
         if: always()
         with:
-          report_paths: '**/test/newman/newman/*.xml'
+          report_paths: 'test/newman/newman/*.xml'
