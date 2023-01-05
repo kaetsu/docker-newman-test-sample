@@ -15,4 +15,11 @@ jobs:
         run: docker-compose up -d
 
       - name: run newman
-        run: docker-compose run --rm newman run github-docker-demo.postman_collection.json -e docker.postman_environment.json
+        continue-on-error: true
+        run: docker-compose run --rm newman run github-docker-demo.postman_collection.json -e docker.postman_environment.json -r cli,junit
+      
+      - name: test report
+        uses: mikepenz/action-junit-report@v2
+        if: always()
+        with:
+          report_paths: '**/test/newman/newman/*.xml'
