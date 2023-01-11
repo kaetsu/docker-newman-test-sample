@@ -23,10 +23,12 @@ jobs:
         if: always()
         with:
           report_paths: '**/test/newman/newman/*.xml'
+          fail_on_failure: true
 
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
+        if: always()
         with:
           payload: |
             {
